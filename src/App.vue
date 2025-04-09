@@ -56,9 +56,8 @@
     computed: {
       rezultāts_q() {
         const W = (this.platums * Math.pow(this.augstums, 2)) / 6;
-        const momentCapacity = W * this.stipriba;
-        const maxCelt = (8 * momentCapacity) / Math.pow(this.garums, 2);
-        return maxCelt.toFixed(2);
+        const maxCelt = 8 * W *(this.stipriba/Math.pow(this.garums, 2));
+        return maxCelt.toFixed(2)
       }
     },
   
